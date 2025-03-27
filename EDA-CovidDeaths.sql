@@ -13,13 +13,15 @@ ORDER BY 1,2;
 
 -- Finding the highest rate of infection for each location
 
-/*
+
 SELECT location, MAX(total_cases) as HighestInfectionCount, population, 
-MAX(total_cases/population)*100 as HighestInfectionRate
-FROM CovidDeaths
-GROUP BY population, location
-ORDER BY 4 DESC;
-*/
+	MAX(total_cases/population)*100 as HighestInfectionRate
+	FROM CovidDeaths
+	WHERE total_cases IS NOT NULL
+		AND population IS NOT NULL
+	GROUP BY population, location
+	ORDER BY 4 DESC;
+
 
 -- Looking at the highest death count per population
 
@@ -56,7 +58,7 @@ GROUP BY date2
 ORDER BY date2 DESC; 
 */
 
--- Joining Deaths and Vaccinations Tables
+-- Altering the 'date' column to be the 'date' datatype in PostgreSQL
 
 /*
 ALTER TABLE CovidDeaths
