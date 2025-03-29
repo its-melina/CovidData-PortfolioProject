@@ -2,6 +2,8 @@ Covid Data Portfolio Project
 
 This project analyzes world data about Covid-19 deaths and vaccinations from 2020-2021. 
 
+Tableau Public Dashboard: https://public.tableau.com/app/profile/melina.faraone/viz/CovidDeaths-PortfolioProject-Book1/Dashboard1 
+
 
 
 Tools and skills used:
